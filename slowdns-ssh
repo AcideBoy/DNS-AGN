@@ -227,7 +227,7 @@ esac
 opc_key1 () {
 echo "Generating your key..."
 cd /etc/slowdns/
-./dns-server -gen-key -privkey-file /root/server.key -pubkey-file /root/server.pub
+dns-server -gen-key -privkey-file /root/server.key -pubkey-file /root/server.pub
 echo -e "FINISHING..."
 finish_ist () {
 iptables -I INPUT -p udp --dport 5300 -j ACCEPT
